@@ -8,6 +8,8 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText display;
+
     String oldNumber = "";
     String op = "+";
     boolean isNewOp = true;
@@ -16,6 +18,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        display = findViewById(R.id.editText);
+        display.setShowSoftInputOnFocus(false);
+
+        display.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getString(R.string.display).equals(display.getText().toString()));
+                display.setText("");
+            }
+        });
 
         ed1 = findViewById(R.id.editText);
     }

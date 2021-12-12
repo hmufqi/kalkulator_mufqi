@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Kalkulator_Mufqi</string>
+    <string name="display">0</string>
 </resources>
